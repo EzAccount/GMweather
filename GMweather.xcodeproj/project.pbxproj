@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		745B04442667B1DF00EFCCF1 /* GMweather WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 745B04432667B1DF00EFCCF1 /* GMweather WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		745B04492667B1E000EFCCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745B04482667B1E000EFCCF1 /* Assets.xcassets */; };
+		745B04502667B1E000EFCCF1 /* GMweather WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		745B04552667B1E000EFCCF1 /* GMweatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B04542667B1E000EFCCF1 /* GMweatherApp.swift */; };
+		745B04572667B1E000EFCCF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B04562667B1E000EFCCF1 /* ContentView.swift */; };
+		745B04592667B1E000EFCCF1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B04582667B1E000EFCCF1 /* NotificationController.swift */; };
+		745B045B2667B1E000EFCCF1 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B045A2667B1E000EFCCF1 /* NotificationView.swift */; };
+		745B045D2667B1E000EFCCF1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B045C2667B1E000EFCCF1 /* ComplicationController.swift */; };
+		745B045F2667B1E000EFCCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745B045E2667B1E000EFCCF1 /* Assets.xcassets */; };
+		745B04622667B1E000EFCCF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745B04612667B1E000EFCCF1 /* Preview Assets.xcassets */; };
+		745B046E2667B1E000EFCCF1 /* GMweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B046D2667B1E000EFCCF1 /* GMweatherTests.swift */; };
+		745B04792667B1E100EFCCF1 /* GMweatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B04782667B1E100EFCCF1 /* GMweatherUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		745B04452667B1DF00EFCCF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745B04392667B1DE00EFCCF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 745B04422667B1DF00EFCCF1;
+			remoteInfo = "GMweather WatchKit App";
+		};
+		745B04512667B1E000EFCCF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745B04392667B1DE00EFCCF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 745B044E2667B1E000EFCCF1;
+			remoteInfo = "GMweather WatchKit Extension";
+		};
+		745B046A2667B1E000EFCCF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745B04392667B1DE00EFCCF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 745B044E2667B1E000EFCCF1;
+			remoteInfo = "GMweather WatchKit Extension";
+		};
+		745B04752667B1E100EFCCF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 745B04392667B1DE00EFCCF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 745B04422667B1DF00EFCCF1;
+			remoteInfo = "GMweather WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		745B04802667B1E100EFCCF1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				745B04502667B1E000EFCCF1 /* GMweather WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04842667B1E100EFCCF1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				745B04442667B1DF00EFCCF1 /* GMweather WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		745B043F2667B1DE00EFCCF1 /* GMweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		745B04432667B1DF00EFCCF1 /* GMweather WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GMweather WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		745B04482667B1E000EFCCF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		745B044A2667B1E000EFCCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GMweather WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		745B04542667B1E000EFCCF1 /* GMweatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMweatherApp.swift; sourceTree = "<group>"; };
+		745B04562667B1E000EFCCF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		745B04582667B1E000EFCCF1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		745B045A2667B1E000EFCCF1 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		745B045C2667B1E000EFCCF1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		745B045E2667B1E000EFCCF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		745B04612667B1E000EFCCF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		745B04632667B1E000EFCCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745B04642667B1E000EFCCF1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		745B04692667B1E000EFCCF1 /* GMweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		745B046D2667B1E000EFCCF1 /* GMweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMweatherTests.swift; sourceTree = "<group>"; };
+		745B046F2667B1E000EFCCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		745B04742667B1E100EFCCF1 /* GMweatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMweatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		745B04782667B1E100EFCCF1 /* GMweatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMweatherUITests.swift; sourceTree = "<group>"; };
+		745B047A2667B1E100EFCCF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		745B044C2667B1E000EFCCF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04662667B1E000EFCCF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04712667B1E100EFCCF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		745B04382667B1DE00EFCCF1 = {
+			isa = PBXGroup;
+			children = (
+				745B04472667B1DF00EFCCF1 /* GMweather WatchKit App */,
+				745B04532667B1E000EFCCF1 /* GMweather WatchKit Extension */,
+				745B046C2667B1E000EFCCF1 /* GMweatherTests */,
+				745B04772667B1E100EFCCF1 /* GMweatherUITests */,
+				745B04402667B1DE00EFCCF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		745B04402667B1DE00EFCCF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				745B043F2667B1DE00EFCCF1 /* GMweather.app */,
+				745B04432667B1DF00EFCCF1 /* GMweather WatchKit App.app */,
+				745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */,
+				745B04692667B1E000EFCCF1 /* GMweatherTests.xctest */,
+				745B04742667B1E100EFCCF1 /* GMweatherUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		745B04472667B1DF00EFCCF1 /* GMweather WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				745B04482667B1E000EFCCF1 /* Assets.xcassets */,
+				745B044A2667B1E000EFCCF1 /* Info.plist */,
+			);
+			path = "GMweather WatchKit App";
+			sourceTree = "<group>";
+		};
+		745B04532667B1E000EFCCF1 /* GMweather WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				745B04542667B1E000EFCCF1 /* GMweatherApp.swift */,
+				745B04562667B1E000EFCCF1 /* ContentView.swift */,
+				745B04582667B1E000EFCCF1 /* NotificationController.swift */,
+				745B045A2667B1E000EFCCF1 /* NotificationView.swift */,
+				745B045C2667B1E000EFCCF1 /* ComplicationController.swift */,
+				745B045E2667B1E000EFCCF1 /* Assets.xcassets */,
+				745B04632667B1E000EFCCF1 /* Info.plist */,
+				745B04642667B1E000EFCCF1 /* PushNotificationPayload.apns */,
+				745B04602667B1E000EFCCF1 /* Preview Content */,
+			);
+			path = "GMweather WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		745B04602667B1E000EFCCF1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				745B04612667B1E000EFCCF1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		745B046C2667B1E000EFCCF1 /* GMweatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				745B046D2667B1E000EFCCF1 /* GMweatherTests.swift */,
+				745B046F2667B1E000EFCCF1 /* Info.plist */,
+			);
+			path = GMweatherTests;
+			sourceTree = "<group>";
+		};
+		745B04772667B1E100EFCCF1 /* GMweatherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				745B04782667B1E100EFCCF1 /* GMweatherUITests.swift */,
+				745B047A2667B1E100EFCCF1 /* Info.plist */,
+			);
+			path = GMweatherUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		745B043E2667B1DE00EFCCF1 /* GMweather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745B04852667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather" */;
+			buildPhases = (
+				745B043D2667B1DE00EFCCF1 /* Resources */,
+				745B04842667B1E100EFCCF1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				745B04462667B1DF00EFCCF1 /* PBXTargetDependency */,
+			);
+			name = GMweather;
+			productName = GMweather;
+			productReference = 745B043F2667B1DE00EFCCF1 /* GMweather.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		745B04422667B1DF00EFCCF1 /* GMweather WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745B04812667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather WatchKit App" */;
+			buildPhases = (
+				745B04412667B1DF00EFCCF1 /* Resources */,
+				745B04802667B1E100EFCCF1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				745B04522667B1E000EFCCF1 /* PBXTargetDependency */,
+			);
+			name = "GMweather WatchKit App";
+			productName = "GMweather WatchKit App";
+			productReference = 745B04432667B1DF00EFCCF1 /* GMweather WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		745B044E2667B1E000EFCCF1 /* GMweather WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745B047D2667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather WatchKit Extension" */;
+			buildPhases = (
+				745B044B2667B1E000EFCCF1 /* Sources */,
+				745B044C2667B1E000EFCCF1 /* Frameworks */,
+				745B044D2667B1E000EFCCF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GMweather WatchKit Extension";
+			productName = "GMweather WatchKit Extension";
+			productReference = 745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		745B04682667B1E000EFCCF1 /* GMweatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745B04882667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweatherTests" */;
+			buildPhases = (
+				745B04652667B1E000EFCCF1 /* Sources */,
+				745B04662667B1E000EFCCF1 /* Frameworks */,
+				745B04672667B1E000EFCCF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				745B046B2667B1E000EFCCF1 /* PBXTargetDependency */,
+			);
+			name = GMweatherTests;
+			productName = GMweatherTests;
+			productReference = 745B04692667B1E000EFCCF1 /* GMweatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		745B04732667B1E100EFCCF1 /* GMweatherUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 745B048B2667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweatherUITests" */;
+			buildPhases = (
+				745B04702667B1E100EFCCF1 /* Sources */,
+				745B04712667B1E100EFCCF1 /* Frameworks */,
+				745B04722667B1E100EFCCF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				745B04762667B1E100EFCCF1 /* PBXTargetDependency */,
+			);
+			name = GMweatherUITests;
+			productName = GMweatherUITests;
+			productReference = 745B04742667B1E100EFCCF1 /* GMweatherUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		745B04392667B1DE00EFCCF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					745B043E2667B1DE00EFCCF1 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					745B04422667B1DF00EFCCF1 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					745B044E2667B1E000EFCCF1 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					745B04682667B1E000EFCCF1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 745B044E2667B1E000EFCCF1;
+					};
+					745B04732667B1E100EFCCF1 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 745B04422667B1DF00EFCCF1;
+					};
+				};
+			};
+			buildConfigurationList = 745B043C2667B1DE00EFCCF1 /* Build configuration list for PBXProject "GMweather" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 745B04382667B1DE00EFCCF1;
+			productRefGroup = 745B04402667B1DE00EFCCF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				745B043E2667B1DE00EFCCF1 /* GMweather */,
+				745B04422667B1DF00EFCCF1 /* GMweather WatchKit App */,
+				745B044E2667B1E000EFCCF1 /* GMweather WatchKit Extension */,
+				745B04682667B1E000EFCCF1 /* GMweatherTests */,
+				745B04732667B1E100EFCCF1 /* GMweatherUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		745B043D2667B1DE00EFCCF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04412667B1DF00EFCCF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B04492667B1E000EFCCF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B044D2667B1E000EFCCF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B04622667B1E000EFCCF1 /* Preview Assets.xcassets in Resources */,
+				745B045F2667B1E000EFCCF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04672667B1E000EFCCF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04722667B1E100EFCCF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		745B044B2667B1E000EFCCF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B04592667B1E000EFCCF1 /* NotificationController.swift in Sources */,
+				745B04572667B1E000EFCCF1 /* ContentView.swift in Sources */,
+				745B045D2667B1E000EFCCF1 /* ComplicationController.swift in Sources */,
+				745B04552667B1E000EFCCF1 /* GMweatherApp.swift in Sources */,
+				745B045B2667B1E000EFCCF1 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04652667B1E000EFCCF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B046E2667B1E000EFCCF1 /* GMweatherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745B04702667B1E100EFCCF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				745B04792667B1E100EFCCF1 /* GMweatherUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		745B04462667B1DF00EFCCF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 745B04422667B1DF00EFCCF1 /* GMweather WatchKit App */;
+			targetProxy = 745B04452667B1DF00EFCCF1 /* PBXContainerItemProxy */;
+		};
+		745B04522667B1E000EFCCF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 745B044E2667B1E000EFCCF1 /* GMweather WatchKit Extension */;
+			targetProxy = 745B04512667B1E000EFCCF1 /* PBXContainerItemProxy */;
+		};
+		745B046B2667B1E000EFCCF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 745B044E2667B1E000EFCCF1 /* GMweather WatchKit Extension */;
+			targetProxy = 745B046A2667B1E000EFCCF1 /* PBXContainerItemProxy */;
+		};
+		745B04762667B1E100EFCCF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 745B04422667B1DF00EFCCF1 /* GMweather WatchKit App */;
+			targetProxy = 745B04752667B1E100EFCCF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		745B047B2667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		745B047C2667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		745B047E2667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GMweather WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "GMweather WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		745B047F2667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GMweather WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "GMweather WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		745B04822667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				IBSC_MODULE = GMweather_WatchKit_Extension;
+				INFOPLIST_FILE = "GMweather WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		745B04832667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				IBSC_MODULE = GMweather_WatchKit_Extension;
+				INFOPLIST_FILE = "GMweather WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		745B04862667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		745B04872667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		745B04892667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				INFOPLIST_FILE = GMweatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMweather WatchKit Extension.appex/GMweather WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		745B048A2667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				INFOPLIST_FILE = GMweatherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMweather WatchKit Extension.appex/GMweather WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		745B048C2667B1E100EFCCF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				INFOPLIST_FILE = GMweatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "GMweather WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		745B048D2667B1E100EFCCF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				INFOPLIST_FILE = GMweatherUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweatherUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "GMweather WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		745B043C2667B1DE00EFCCF1 /* Build configuration list for PBXProject "GMweather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B047B2667B1E100EFCCF1 /* Debug */,
+				745B047C2667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745B047D2667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B047E2667B1E100EFCCF1 /* Debug */,
+				745B047F2667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745B04812667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B04822667B1E100EFCCF1 /* Debug */,
+				745B04832667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745B04852667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B04862667B1E100EFCCF1 /* Debug */,
+				745B04872667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745B04882667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B04892667B1E100EFCCF1 /* Debug */,
+				745B048A2667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		745B048B2667B1E100EFCCF1 /* Build configuration list for PBXNativeTarget "GMweatherUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				745B048C2667B1E100EFCCF1 /* Debug */,
+				745B048D2667B1E100EFCCF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 745B04392667B1DE00EFCCF1 /* Project object */;
+}
