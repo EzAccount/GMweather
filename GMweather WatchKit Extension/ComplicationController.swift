@@ -40,20 +40,37 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     // MARK: - Timeline Population
     
-    func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+    func getCurrentTimelineEntry(
+        for complication: CLKComplication,
+        withHandler callback: @escaping (CLKComplicationTimelineEntry?) -> Void)
+    {
+    let date = Date();
+    let entry: CLKComplicationTimelineEntry
+    let diff = date.timeIntervalSince1970 - dlastMeasurementDate.timeIntervalSince1970
+    if (diff <= 1000)  {
+        let handler = CLKComplicationTemplateModularSmallSimpleText(textProvider: CLKSimpleTextProvider(text: state.temperature) )
+        entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: handler)
+    } else {
+        state.updateWeather()
+        let level = String(state.temperature)
+        let handler = CLKComplicationTemplateModularSmallSimpleText(textProvider: CLKSimpleTextProvider(text: level ))
+        entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: handler)
+        dlastMeasurementDate = Date()
+        
     }
-    
-    func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
-        // Call the handler with the timeline entries after the given date
-        handler(nil)
+        callback(entry)
     }
 
     // MARK: - Sample Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
-        // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        switch complication.family {
+        case .modularSmall:
+            let random = CLKComplicationTemplateModularSmallSimpleText(textProvider: CLKSimpleTextProvider(text: "70") )
+            handler(random)
+        default:
+            handler(nil)
+        // Pass the template to ClockKit.
+        }
     }
 }

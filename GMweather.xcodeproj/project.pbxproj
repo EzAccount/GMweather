@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		745A1AEB2667C6580054677F /* SwiftyWeatherKit in Frameworks */ = {isa = PBXBuildFile; productRef = 745A1AEA2667C6580054677F /* SwiftyWeatherKit */; };
 		745B04442667B1DF00EFCCF1 /* GMweather WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 745B04432667B1DF00EFCCF1 /* GMweather WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		745B04492667B1E000EFCCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745B04482667B1E000EFCCF1 /* Assets.xcassets */; };
 		745B04502667B1E000EFCCF1 /* GMweather WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -105,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745A1AEB2667C6580054677F /* SwiftyWeatherKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +127,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		745A1AE92667C6580054677F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		745B04382667B1DE00EFCCF1 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +142,7 @@
 				745B046C2667B1E000EFCCF1 /* GMweatherTests */,
 				745B04772667B1E100EFCCF1 /* GMweatherUITests */,
 				745B04402667B1DE00EFCCF1 /* Products */,
+				745A1AE92667C6580054677F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,9 +222,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				745A1AE62667C64C0054677F /* PBXTargetDependency */,
 				745B04462667B1DF00EFCCF1 /* PBXTargetDependency */,
 			);
 			name = GMweather;
+			packageProductDependencies = (
+				745A1AE42667C63C0054677F /* SwiftyWeatherKit */,
+			);
 			productName = GMweather;
 			productReference = 745B043F2667B1DE00EFCCF1 /* GMweather.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -247,8 +261,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				745A1AE82667C6510054677F /* PBXTargetDependency */,
 			);
 			name = "GMweather WatchKit Extension";
+			packageProductDependencies = (
+				745A1AEA2667C6580054677F /* SwiftyWeatherKit */,
+			);
 			productName = "GMweather WatchKit Extension";
 			productReference = 745B044F2667B1E000EFCCF1 /* GMweather WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -326,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 745B04382667B1DE00EFCCF1;
+			packageReferences = (
+				745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */,
+			);
 			productRefGroup = 745B04402667B1DE00EFCCF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +433,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		745A1AE62667C64C0054677F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 745A1AE52667C64C0054677F /* SwiftyWeatherKit */;
+		};
+		745A1AE82667C6510054677F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 745A1AE72667C6510054677F /* SwiftyWeatherKit */;
+		};
 		745B04462667B1DF00EFCCF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 745B04422667B1DF00EFCCF1 /* GMweather WatchKit App */;
@@ -438,7 +467,8 @@
 		745B047B2667B1E100EFCCF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -470,6 +500,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -489,16 +520,22 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = driverkit;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
 			};
 			name = Debug;
 		};
 		745B047C2667B1E100EFCCF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -531,6 +568,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_ON_DEMAND_RESOURCES = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -542,20 +580,29 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = driverkit;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.3;
 			};
 			name = Release;
 		};
 		745B047E2667B1E100EFCCF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"GMweather WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "GMweather WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -565,21 +612,27 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
 		745B047F2667B1E100EFCCF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = NO;
 				DEVELOPMENT_ASSET_PATHS = "\"GMweather WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 4PW2DP4FBU;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "GMweather WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -589,18 +642,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
 		745B04822667B1E100EFCCF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -610,17 +666,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
 		745B04832667B1E100EFCCF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -630,36 +688,43 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
 		745B04862667B1E100EFCCF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4PW2DP4FBU;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		745B04872667B1E100EFCCF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4PW2DP4FBU;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtikhonov.GMweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -809,6 +874,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EzAccount/SwiftyWeatherKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		745A1AE42667C63C0054677F /* SwiftyWeatherKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */;
+			productName = SwiftyWeatherKit;
+		};
+		745A1AE52667C64C0054677F /* SwiftyWeatherKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */;
+			productName = SwiftyWeatherKit;
+		};
+		745A1AE72667C6510054677F /* SwiftyWeatherKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */;
+			productName = SwiftyWeatherKit;
+		};
+		745A1AEA2667C6580054677F /* SwiftyWeatherKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 745A1AE32667C63C0054677F /* XCRemoteSwiftPackageReference "SwiftyWeatherKit" */;
+			productName = SwiftyWeatherKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 745B04392667B1DE00EFCCF1 /* Project object */;
 }
